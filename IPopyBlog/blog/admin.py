@@ -99,10 +99,6 @@ class PostAdmin(BaseOwnerAdmin):
 
     owner.short_description = '作者'
 
-    def get_queryset(self, request):
-        qs = super(PostAdmin, self).get_queryset(request)
-        return qs.filter(owner=request.user)
-
     # class Media:
     #     css = {
     #         'all': ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css", ),
